@@ -1,0 +1,36 @@
+@if (pelicula(); as p) {
+    <div class="ficha">
+
+        <img [src]="p.imagenURL" [alt]="p.nombre" />
+
+        <div class="datos">
+
+            <h2>{{ p.nombre }}</h2>
+
+            <p class="meta">
+
+                <!-- <span class="badge">{{ p.formato }}</span>
+                <span class="badge">{{ p.idioma }}</span> -->
+                <span class="badge">{{ p.duracionMinutos }} minutos</span>
+
+                @if (p.restriccionEdad !== "ninguna") {
+                    <span class="badge restriccion">{{ p.restriccionEdad }}</span>
+                }
+            </p>
+
+            <p class="generos">{{ p.generos.map((g) => g.nombre ).join(", ") }}</p>
+
+            <p class="sinopsis">{{ p.sinopsis }}</p>
+
+            <!-- Aca irian las funciones disponibles y reseñas -->
+            <p class="pendientes">Funciones disponibles y reseñas</p>
+
+            <a routerLink="/peliculas">Volver a la cartelera</a>
+
+        </div>
+    </div>
+} @else {
+    <p class="not-found">Película no encontrada</p>
+
+    <a routerLink="/peliculas">Volver a la cartelera</a>
+}

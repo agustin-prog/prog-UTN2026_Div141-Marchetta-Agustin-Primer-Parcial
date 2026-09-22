@@ -1,0 +1,51 @@
+:host { 
+    display: block; 
+    font-family: system-ui, sans-serif; 
+    padding: 1rem; 
+}
+
+.ficha { 
+    display: block; 
+    gap: 1.5rem; 
+    max-width: 700px; 
+}
+
+.ficha img { 
+    width: 220px; 
+    border-radius: 
+    8px; 
+}
+
+.meta { 
+    display: flex; 
+    gap: 0.4rem; 
+    flex-wrap: wrap; 
+}
+
+.badge { 
+    background: #eee; 
+    border-radius: 4px; 
+    padding: 0.15rem 0.5rem; 
+    font-size: 0.8rem; 
+}
+
+.badge.restriccion { 
+    background: #fdecea; 
+    color: #c62828; 
+}
+
+.generos { 
+    color: #666; 
+    font-size: 0.9rem; 
+}
+
+.sinopsis { 
+    line-height: 1.4;
+}
+
+.pendiente { 
+    color: #9a6b00; 
+    background: #fff8e1; 
+    padding: 0.5rem; 
+    border-radius: 6px; 
+}
