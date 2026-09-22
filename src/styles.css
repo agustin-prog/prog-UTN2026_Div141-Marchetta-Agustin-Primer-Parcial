@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    /* Declaración de variables globales */
+    --color-fondo-principal: #001621;
+    --color-fondo-secundario: #062a34;
+    --color-fondo-secundario-hover: #0a3547;
+    
+    --color-texto-principal: #f4f8fa;
+    --color-texto-secundario: #a9bbc3;
+    --color-texto-desahbilitado: #607984;
+
+    --color-principal: #f5b942;
+    --color-principal-hover: #ffd166;
+    --color-principal-seleccionado: #f5b942;
+
+    --color-exito: #35c759;
+
+    --color-error: #ff5c5c;
+
+    --fuente-pincipal: ;
+}
+
+/* Aplicación global */
+/* body {
+  background-color: var(--color-fondo-principal);
+  color: var(--color-texto-principal);
+} */
