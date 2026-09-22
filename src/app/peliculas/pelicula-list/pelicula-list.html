@@ -1,0 +1,33 @@
+<h2>Cartelera</h2>
+
+<section class="main">
+    <input 
+        type="text"
+        placeholder="Buscar película o género..."
+        [value]="texto()"
+        (input)="texto.set($any($event.target).value)"
+    />
+    
+    <div class="generos">
+        @for (g of generosDisponibles(); track g) {
+                <button
+                    type="button"
+                    class="chip"
+                    [class.selected]="generoSeleccionado()?.id === g.id"
+                    (click)="elegirGenero(g)"
+                >
+                    {{ g.nombre }}
+            </button>
+        }
+    </div>
+    
+    <div class="grid">
+        @for (p of peliculasFiltradas(); track p.id) {
+            <a [routerLink]="['/peliculas', p.id]">
+                <app-pelicula-card [pelicula]="p"/>
+            </a>
+        } @empty {
+            <p class="empty">No se encontraron películas con ese criterio.</p>
+        }
+    </div>
+</section>
