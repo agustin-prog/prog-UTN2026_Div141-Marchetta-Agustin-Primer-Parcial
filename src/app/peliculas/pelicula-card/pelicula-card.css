@@ -1,0 +1,41 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: system-ui, sans-serif;
+    max-width: 220px;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.body {
+    padding: 0.5rem 0.75rem;
+}
+
+.meta {
+    display: flex;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background-color: #eee;
+    border-radius: 4px;
+    padding: 0.1rem 0.4rem;
+    font-size: 0.75rem;
+}
+
+.badge.restriccion {
+    background: #fdecea;
+    color: #c62828;
+}
+
+.generos {
+    font-size: 0.8rem;
+    color: #666;
+}
