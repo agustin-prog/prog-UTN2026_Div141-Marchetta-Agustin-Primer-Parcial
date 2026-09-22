@@ -1,9 +1,18 @@
 <nav>
-  <a routerLink="/peliculas" routerLinkActive="active" >Cartelera</a>
 
-  <!-- Link q este invisible, pero q cuando el login sea con el admin se visualize -->
-  <!-- <a routerLink="/admin/peliculas" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Admin . Películas</a> -->
+  <section>
+    <a routerLink="/peliculas" routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: true}"
+    >Cartelera</a>
+  
+    <!-- Link q este invisible, pero q cuando el login sea con el admin se visualize -->
+    <a routerLink="/peliculas/1" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Admin . Películas</a>
+  
+  </section>
 
   <!-- Secction q contiene todas las opciones q tienen un usuario sin registrar y registrado -->
+  <section>
+    <a href="" class="cuenta">Mi cuenta</a>
+  </section>
 </nav>
 <router-outlet />
