@@ -53,4 +53,6 @@ export class PeliculaList {
       this.generoSeleccionado.set(g);
     }
   }
+
+  /* Aca ira la logica para mostrar las peliculas mas vendidas */
 };
