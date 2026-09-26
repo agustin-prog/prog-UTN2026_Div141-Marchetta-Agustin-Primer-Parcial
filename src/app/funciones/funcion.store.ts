@@ -17,9 +17,7 @@ export class FuncionStore {
             pelicula: this.peliculaStore.find(1)!, 
             formato: "2D",
             idioma: "castellano",
-            fechaDiaInicio: Date.now(),
-            fechaDiaFin: Date.now(), 
-            horario: 1300,
+            fechaHoraInicio: new Date(2026, 9, 27, 13, 0),
             sala: this.salaStore.find(1)!,
             precio: 20000,
             esPreventa: false,
@@ -30,9 +28,7 @@ export class FuncionStore {
             pelicula: this.peliculaStore.find(1)!, 
             formato: "2D",
             idioma: "castellano",
-            fechaDiaInicio: Date.now(),
-            fechaDiaFin: Date.now(),
-            horario: 1430,
+            fechaHoraInicio: new Date(2026, 9, 27, 14, 30),
             sala: this.salaStore.find(1)!,
             precio: 20000,
             esPreventa: false,
@@ -43,10 +39,8 @@ export class FuncionStore {
             pelicula: this.peliculaStore.find(1)!, 
             formato: "3D",
             idioma: "castellano",
-            fechaDiaInicio: Date.now(),
-            fechaDiaFin: Date.now(), 
+            fechaHoraInicio: new Date(2026, 9, 28, 16, 0),
             sala: this.salaStore.find(1)!,
-            horario: 1600,
             precio: 30000,
             esPreventa: false,
         },
@@ -56,10 +50,8 @@ export class FuncionStore {
             pelicula: this.peliculaStore.find(1)!, 
             formato: "4D",
             idioma: "subtitulada",
-            fechaDiaInicio: Date.now(),
-            fechaDiaFin: Date.now(), 
+            fechaHoraInicio: new Date(2026, 9, 29, 17, 30),
             sala: this.salaStore.find(1)!,
-            horario: 1730,
             precio: 80000,
             esPreventa: false,
         },
@@ -69,10 +61,8 @@ export class FuncionStore {
             pelicula: this.peliculaStore.find(2)!, 
             formato: "5D",
             idioma: "castellano",
-            fechaDiaInicio: Date.now(),
-            fechaDiaFin: Date.now(), 
+            fechaHoraInicio: new Date(2026, 9, 27, 13, 0), 
             sala: this.salaStore.find(2)!,
-            horario: 1300,
             precio: 100000,
             esPreventa: false,
         },
@@ -82,23 +72,16 @@ export class FuncionStore {
             pelicula: this.peliculaStore.find(2)!, 
             formato: "2D",
             idioma: "castellano",
-            fechaDiaInicio: Date.now(),
-            fechaDiaFin: Date.now(), 
+            fechaHoraInicio: new Date(2026, 9, 27, 14, 30),
             sala: this.salaStore.find(2)!,
-            horario: 1430,
             precio: 20000,
             esPreventa: false,
         }
     ]);
 
-    funcionesPorPelicula(peliculaID: number): FuncionModel[] | undefined {
+    buscarPorPelicula(peliculaID: number): FuncionModel[] | undefined {
 
         return this.funciones().filter((f) => f.pelicula.id === peliculaID);
-    }
-
-    funcionesPorFecha(fecha: number): FuncionModel[] | undefined {
-
-        return this.funciones().filter((f) => f.fechaDiaInicio === fecha);
     }
 
     find(id: number): FuncionModel | undefined {

@@ -9,12 +9,11 @@ export interface FuncionModel {
     pelicula: PeliculaModel;
     formato: Formato;
     idioma: Idioma;
-    fechaDiaInicio: number;
-    fechaDiaFin: number;
-    horario: number;
+    fechaHoraInicio: Date;
     sala: SalaModel;
     precio: number;
     esPreventa: boolean;
+    precioPreventa?: number;
 }
 
 export type FuncionDraft = Omit<FuncionModel, "id">;
